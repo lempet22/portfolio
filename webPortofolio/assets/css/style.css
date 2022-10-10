@@ -1,0 +1,450 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	/*border: 1px solid white;*/
+}
+
+@font-face{
+	font-family: 'Barlow';
+	src: url('../font/Barlow-Regular.ttf') format('truetype');
+}
+
+:root {
+	scroll-behavior: smooth;
+	font-family: Barlow;
+	color: white;
+	background-color: #050124;
+}
+
+
+/* ------ Navigation ------ */
+
+#navigation {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 15%;
+	background-color: #060128;
+	z-index: 99;
+}
+
+.logo {
+	font-family: algerian;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	position: relative;
+}
+
+.logo a {
+	color: white;
+	padding: 10px 25px;
+	/*border: 1px solid white;*/
+}
+
+.logo a span {
+	color: red;
+}
+
+.menu {
+	display: flex;
+	min-width: 45%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu li a {
+	padding: .5em .8em;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 1px;
+	position: relative;
+	transition: all 1s;
+	opacity: .5;
+}
+
+.menu li a::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background-color: red;
+	top: 0;
+	right: 0;
+	transition: 1s;
+}
+
+.menu li a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background-color: red;
+	bottom: 0;
+	left: 0;
+	transition: 1s;
+}
+
+.menu li a:hover {
+	opacity: 1;
+}
+
+.menu li a:hover::before {
+	width: 100%;
+}
+
+.menu li a:hover::after{
+	width: 100%;
+}
+
+
+/* ------ Header ------ */
+
+header {
+	padding: 70px 15% 40px;
+	display: flex;
+	/*grid-template-columns: repeat(2, 1fr);*/
+	align-items: center;
+}
+
+.text-hero {
+	display: flex;
+	flex-direction: column;
+	padding: 1em 0;
+}
+
+.text-hero h3 {
+	font-size: 1.3rem;
+	letter-spacing: 2px;
+}
+
+.text-hero h1 {
+	font-size: 3rem;
+	line-height: 1.5em;
+	letter-spacing: 4px;
+}
+
+.text-hero h5 {
+	font-size: 1rem;
+	line-height: 1.5em;
+	letter-spacing: 2px;
+}
+
+.text-hero span {
+	color: red;
+}
+
+.text-hero p {
+	font-size: 1rem;
+	line-height: 1.2em;
+	margin: 10px 0 15px;
+}
+
+.sosmed {
+	display: inline-block;
+	/*padding: .5em 1em;*/
+}
+
+.sosmed a img {
+	margin: 0 .3em;
+	height: 25px;
+	transition: ease 1s;
+}
+
+.sosmed a img:hover {
+	transform: scale(1.2) rotate(10deg);
+}
+
+.cv-button {
+	margin-top: 25px;
+	margin-left: 10px;
+}
+
+.cv-button a {
+	border: 1px solid;
+	padding: .5em 1em;
+}
+
+/* ------ About ------ */
+
+#about {
+	min-height: 50vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2.5fr;
+	padding: 50px 15%;
+	/*flex-direction: column;*/
+	align-items: center;
+}
+
+#about h2 {
+	font-size: 3em;
+	font-weight: 900;
+	position: relative;
+	color: #1a0041;
+}
+
+#about h2::after {
+	content: "";
+	background-color: #1a0041;
+	position: absolute;
+	height: 3px;
+	width: 190px;
+	top: 100%;
+	left: 0;
+	bottom: 0;
+}
+
+.text-about {
+	text-align: left;
+}
+
+.text-about p {
+	margin: 1em 0;
+}
+
+/* ------ Skill ------ */
+
+#skill {
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 15%;
+	grid-gap: 25px;
+	align-items: center;
+	justify-content: space-evenly;
+
+}
+
+#skill h2 {
+	font-size: 3em;
+	font-weight: 900;
+	position: relative;
+	color: #1a0041;
+}
+
+#skill h2::after {
+	content: "";
+	background-color: #1a0041;
+	position: absolute;
+	height: 3px;
+	width: 150px;
+	top: 100%;
+	left: 0;
+	bottom: 0;
+}
+
+.container-skill {
+	display: flex;
+}
+
+.card {
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+}
+
+.card img{
+	height: 200px;
+	border-radius: 15px;
+	transition: 1s;
+}
+
+.card img:hover {
+	transform: scale(1.1);
+}
+
+/* ------ Contact ------ */
+
+#contact {
+	min-height: 50vh;
+	padding: 80px 28%;
+}
+
+#contact h2 {
+	font-size: 3em;
+	font-weight: 900;
+	position: relative;
+	color: #1a0041;
+	margin-bottom: 20px;
+}
+
+form {
+	text-align: center;
+	min-height: 50vh;
+	padding: 20px 8%;
+	display: flex;
+	flex-direction: column;
+}
+
+form .card {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+	margin-top: 20px;
+}
+
+form .card input {
+	margin: 10px 0;
+	width: 100%;
+}
+
+form .card #name, 
+form .card #email,
+form .card #subject{
+	height: 40px;
+	text-indent: 10px;
+	background-color: #180728;
+	border: none;
+	color: white;
+}
+
+form .card #message {
+	height: 100px;
+	text-indent: 10px;
+	background-color: #180728;
+	border: none;
+	color: white;
+}
+
+form .card #kirim {
+	width: 160px;
+	height: 35px;
+	background-color: green;
+	border: none;
+	color: white;
+	border-radius: 3px;
+}
+
+/* ------ Footer ------ */
+
+footer {
+	min-height: 20vh;
+	background-color: #060128;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+}
+
+footer ul li {
+	margin: 10px;
+}
+
+footer a {
+	margin-top: 10px;
+} 
+
+footer ul li a img {
+	height: 25px;
+	transition: 1s;
+}
+
+footer ul li a img:hover {
+	transform: scale(1.5);
+}
+
+
+/* ------ Responsive Tablet ------- */
+
+
+@media screen and (max-width: 768px){
+	#navigation {
+		padding: 1em 8%;
+	}
+
+	.menu {
+		min-width: 55%;
+	}
+
+	header {
+		padding: 100px 10% 40px;
+		display: flex;
+		flex-wrap: wrap;
+		/*grid-template-columns: 1fr;*/
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero {
+		display: flex;
+		justify-content: center;
+		margin: 50px 0;
+	}
+
+	.hero img{
+		height: 400px;
+	}
+
+	#about {
+		grid-template-columns: 1fr;
+		padding: 50px 10%;
+	}
+
+	#about h2 {
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	#about .text-about {
+		text-align: justify;
+	}
+
+	.container-skill {
+		flex-wrap: wrap;
+		padding: 50px 10%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card img {
+		height: 250px;
+	}
+
+	#contact {
+		min-height: 50vh;
+		padding: 80px 8%;
+	}
+}
+
+
+/* ------ Responsive Mobile ------- */
+
+@media screen and (max-width: 576px){
+	#navigation {
+		padding: 1em 8%;
+		justify-content: center;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	#skill {
+		grid-template-columns: 1fr 1fr;
+		padding: 50px 10%;
+	}
+
+	#contact {
+		min-height: 50vh;
+		padding: 80px 2%;
+	}
+
+	#contact form h2 {
+		margin-top: -110px;
+	}
+}
