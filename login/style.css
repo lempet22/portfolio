@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+}
+
+.login {
+	margin: 150px auto;
+	max-width: 25%;
+	/*height: 60vh;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	color: whitesmoke;
+	/*border: 1px solid red;*/
+}
+
+h3 {
+	font-size: 2em;
+	font-family: sans-serif;
+	color: whitesmoke;
+}
+
+img {
+	margin: 15px 0;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.input {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.input input {
+	border: none;
+	height: 30px;
+	width: 14vw;
+	text-indent: 5px;
+	background-color: transparent;
+	border-bottom: 1px solid whitesmoke;
+	margin: 10px 0;
+	color: whitesmoke;
+}
+
+.input input::placeholder {
+	color: whitesmoke;
+}
+
+.button button{
+	width: 14vw;
+	height: 35px;
+	font-size: .7rem;
+	background-color: green;
+	border-radius: 50px;
+	color: whitesmoke;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: none;
+	margin: 20px 0;
+}
+
+ul {
+	margin-top: 40px;
+}
+
+ul li a {
+	color: whitesmoke;
+	font-size: .8rem;
+	margin: 10px 0;
+	text-decoration: none;
+}
+
+
+
+
+/* Responsive Tablet */
+
+@media screen and (max-width: 850px) {
+	.login {
+		margin: 100px auto;
+		max-width: 55%;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+		font-family: sans-serif;
+		color: whitesmoke;
+	}
+
+	img {
+		margin: 20px 0;
+		height: 60px;
+	}
+
+	.input input {
+		width: 28vw;
+		font-size: .7rem;
+	}
+
+	.button button{
+		width: 28vw;
+		height: 25px;
+		margin: 10px 0;
+		font-size: .5rem;
+	}
+
+	ul li a {
+		font-size: .6rem;
+	}
+}
+
+
+
+
+
+
+
+
+/* Responsive Mobile */
+
+@media screen and (max-width: 450px) {
+	.login {
+		margin: 100px auto;
+		max-width: 55%;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-family: sans-serif;
+		color: whitesmoke;
+	}
+
+	img {
+		margin: 20px 0;
+		height: 60px;
+	}
+
+	.input input {
+		width: 28vw;
+		font-size: .7rem;
+	}
+
+	.button button{
+		width: 28vw;
+		height: 25px;
+		margin: 10px 0;
+		font-size: .5rem;
+	}
+
+	ul li a {
+		font-size: .6rem;
+	}
+}
